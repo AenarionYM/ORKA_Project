@@ -11,3 +11,16 @@ Z:\Rider\O.R.K.A. Project ver. 2.0\O.R.K.A. Project ver. 2.0\obj\Debug\netcoreap
 Z:\Rider\O.R.K.A. Project ver. 2.0\O.R.K.A. Project ver. 2.0\obj\Debug\netcoreapp3.1\O.R.K.A. Project ver. 2.0.dll
 Z:\Rider\O.R.K.A. Project ver. 2.0\O.R.K.A. Project ver. 2.0\obj\Debug\netcoreapp3.1\O.R.K.A. Project ver. 2.0.pdb
 Z:\Rider\O.R.K.A. Project ver. 2.0\O.R.K.A. Project ver. 2.0\obj\Debug\netcoreapp3.1\O.R.K.A. Project ver. 2.0.genruntimeconfig.cache
+C:\Users\JAVR Warg\Desktop\O.R.K.A Project v2.0\ORKA_Project\O.R.K.A. Project ver. 2.0\bin\Debug\netcoreapp3.1\O.R.K.A. Project ver. 2.0.exe
+C:\Users\JAVR Warg\Desktop\O.R.K.A Project v2.0\ORKA_Project\O.R.K.A. Project ver. 2.0\bin\Debug\netcoreapp3.1\O.R.K.A. Project ver. 2.0.deps.json
+C:\Users\JAVR Warg\Desktop\O.R.K.A Project v2.0\ORKA_Project\O.R.K.A. Project ver. 2.0\bin\Debug\netcoreapp3.1\O.R.K.A. Project ver. 2.0.runtimeconfig.json
+C:\Users\JAVR Warg\Desktop\O.R.K.A Project v2.0\ORKA_Project\O.R.K.A. Project ver. 2.0\bin\Debug\netcoreapp3.1\O.R.K.A. Project ver. 2.0.runtimeconfig.dev.json
+C:\Users\JAVR Warg\Desktop\O.R.K.A Project v2.0\ORKA_Project\O.R.K.A. Project ver. 2.0\bin\Debug\netcoreapp3.1\O.R.K.A. Project ver. 2.0.dll
+C:\Users\JAVR Warg\Desktop\O.R.K.A Project v2.0\ORKA_Project\O.R.K.A. Project ver. 2.0\bin\Debug\netcoreapp3.1\O.R.K.A. Project ver. 2.0.pdb
+C:\Users\JAVR Warg\Desktop\O.R.K.A Project v2.0\ORKA_Project\O.R.K.A. Project ver. 2.0\obj\Debug\netcoreapp3.1\O.R.K.A. Project ver. 2.0.csprojAssemblyReference.cache
+C:\Users\JAVR Warg\Desktop\O.R.K.A Project v2.0\ORKA_Project\O.R.K.A. Project ver. 2.0\obj\Debug\netcoreapp3.1\O.R.K.A. Project ver. 2.0.AssemblyInfoInputs.cache
+C:\Users\JAVR Warg\Desktop\O.R.K.A Project v2.0\ORKA_Project\O.R.K.A. Project ver. 2.0\obj\Debug\netcoreapp3.1\O.R.K.A. Project ver. 2.0.AssemblyInfo.cs
+C:\Users\JAVR Warg\Desktop\O.R.K.A Project v2.0\ORKA_Project\O.R.K.A. Project ver. 2.0\obj\Debug\netcoreapp3.1\O.R.K.A. Project ver. 2.0.csproj.CoreCompileInputs.cache
+C:\Users\JAVR Warg\Desktop\O.R.K.A Project v2.0\ORKA_Project\O.R.K.A. Project ver. 2.0\obj\Debug\netcoreapp3.1\O.R.K.A. Project ver. 2.0.dll
+C:\Users\JAVR Warg\Desktop\O.R.K.A Project v2.0\ORKA_Project\O.R.K.A. Project ver. 2.0\obj\Debug\netcoreapp3.1\O.R.K.A. Project ver. 2.0.pdb
+C:\Users\JAVR Warg\Desktop\O.R.K.A Project v2.0\ORKA_Project\O.R.K.A. Project ver. 2.0\obj\Debug\netcoreapp3.1\O.R.K.A. Project ver. 2.0.genruntimeconfig.cache

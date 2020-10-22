@@ -11,9 +11,7 @@ namespace O.R.K.A._Project_ver._2._0
             //Konstruktory Klas//
             Methods methods = new Methods();
             Menu menu = new Menu();
-            
-            //Eq
-            bool kot = false;
+            Eq eq = new Eq();
             
             //Unlocker'y
             bool dyrkaWBramie = true;
@@ -25,6 +23,7 @@ namespace O.R.K.A._Project_ver._2._0
             int nagany = 0;
             
             //Wstęp do gry
+            methods.Clear();
             Console.WriteLine("Witaj w Project O.R.K.A.!");
             methods.Sleep(350);
             Console.WriteLine("Jest to gra textowa w której wcielasz się w frajera który chodzi do TEB'u");
@@ -45,7 +44,6 @@ namespace O.R.K.A._Project_ver._2._0
             {
                 Console.WriteLine("Zapraszam!");
                 methods.Ent();
-                methods.Clear();
                 goto front;
                 
             }
@@ -53,34 +51,32 @@ namespace O.R.K.A._Project_ver._2._0
             {
                 Console.WriteLine("Zapraszam ponownie!");
                 methods.Ent();
-                methods.Clear();
                 goto menu;
             }
             else if (menuChoice == "3")
             {
                 Console.WriteLine("No raczej nie");
                 methods.Ent();
-                methods.Clear();
                 goto menu;
             }
             else if (menuChoice == "4")
             {
                 Console.WriteLine("No xD");
                 methods.Ent();
-                methods.Clear();
-                goto menu;
+                System.Environment.Exit(0);
             }
             else
             {
                 Console.WriteLine("Jak ty głupi");
                 methods.Ent();
-                methods.Clear();
                 goto menu;            
             }
 
             //Przed budynkiem
             front:
             {
+                
+             methods.Clear();
              Console.WriteLine("Stoisz przed głównym budynkiem Technikum TEB Edukacja w Bielsku");
              methods.Sleep(500);
              Console.WriteLine("Co robisz?");
@@ -124,6 +120,14 @@ namespace O.R.K.A._Project_ver._2._0
                 methods.Sleep(500);
                 Console.Write(".");
                 Environment.Exit(1);
+             }
+             
+             else if (choiseToEnter == "1337")
+             {
+                 eq.Items.Add(Item.Extingusher);
+                 methods.Clear();
+                 eq.ItemsDisplay();
+                 goto front;
              }
 
              else
@@ -183,6 +187,7 @@ namespace O.R.K.A._Project_ver._2._0
             //Brama
             gate:
             {
+                methods.Clear();
                 Console.WriteLine("Znajdujesz się w przedsionku");
                 methods.Sleep(500);
                 Console.WriteLine("Widzisz dwie drogi");
@@ -203,9 +208,9 @@ namespace O.R.K.A._Project_ver._2._0
                     methods.Ent();
                     methods.Clear();
                     methods.Sleep(500);
-                    goto groundfloor;
+                    goto groundFloor;
                 }
-                else if (choiseGate == "2" && kot == false)
+                else if (choiseGate == "2" && !eq.Items.Contains(Item.Code))
                 {
                     Console.WriteLine("*Zamknięte*");
                     methods.Sleep(500);
@@ -215,7 +220,7 @@ namespace O.R.K.A._Project_ver._2._0
                     methods.Sleep(500);
                     goto gate;
                 }
-                else if (choiseGate == "2" && kot == true)
+                else if (choiseGate == "2" && eq.Items.Contains(Item.Code))
                 {
                     Console.WriteLine("*beep*");
                     methods.Sleep(500);
@@ -234,20 +239,126 @@ namespace O.R.K.A._Project_ver._2._0
                     goto front;
                 }
                 else if (choiseGate == "4")
-                {
-                    //eq do zrobienia
+                { 
+                    eq.ItemsDisplay();
+                    goto gate;
+
                 }
                 else
                 {
-                    methods.els();
+                    methods.Els();
                     goto gate;
                 }
             }
             
             //Korytarz parter
-            groundfloor:
+            groundFloor:
             {
+                methods.Clear();
+                methods.Sleep(500);
+                Console.WriteLine("1. Sala 1");
+                methods.Sleep(500);
+                Console.WriteLine("2. Siadacze");
+                methods.Sleep(500);
+                Console.WriteLine("3. Pokój nauczycielski");
+                methods.Sleep(500);
+                Console.WriteLine("4. Kible");
+                methods.Sleep(500);
+                Console.WriteLine("5. Sala Fryzjerska");
+                methods.Sleep(500);
+                Console.WriteLine("6. Sekretariat");
+                methods.Sleep(500);
+                Console.WriteLine("7. Sala Dentystyczna");
+                methods.Sleep(500);
+                Console.WriteLine("8. Automat z Kawą");
+                methods.Sleep(500);
+                Console.WriteLine("9. Dispenser z wodą");
+                methods.Sleep(500);
+                Console.WriteLine("10. Zinwestyguj gaśnice");
+                methods.Sleep(500);
+                Console.WriteLine("11. Zawróć");
+                methods.Sleep(500);
+                Console.WriteLine("12. Schody na górę");
+                methods.Sleep(500);
+                Console.WriteLine("13. Ekwipunek");
+
+                string choiceGround = Console.ReadLine();
                 
+                //Sala 1
+                if (choiceGround == "1")
+                {
+                    
+                }                
+                //Siadacze
+                else if (choiceGround == "2")
+                {
+                    
+                }                
+                //Pokój nauczycielski
+                else if (choiceGround == "3")
+                {
+                    
+                }                
+                //Kible
+                else if (choiceGround == "4")
+                {
+                    
+                }                
+                //Sala Fryzjerska
+                else if (choiceGround == "5")
+                {
+                    
+                }                
+                //Sekretariat
+                else if (choiceGround == "6")
+                {
+                    
+                }                
+                //Sala Dentystyczna
+                else if (choiceGround == "7")
+                {
+                    
+                }                
+                //Automat z Kawą
+                else if (choiceGround == "8")
+                {
+                    
+                }                
+                //Dispenser z wodą
+                else if (choiceGround == "9")
+                {
+                    
+                }                
+                //Zinwestyguj gaśnice
+                else if (choiceGround == "10")
+                {
+                    methods.Clear();
+                    eq.Items.Add(Item.Extingusher);
+                    Console.WriteLine("Zauważasz gaśnice");
+                    methods.Sleep(500);
+                    Console.WriteLine("Uważając że, jest przydatna zabierasz ją");
+                    methods.Sleep(500);
+                    Console.WriteLine("*Zdobywasz gaśnice*");
+                    methods.Ent();
+                    goto groundFloor;
+                }                
+                //Zawróć
+                else if (choiceGround == "11")
+                {
+                    
+                }                
+                //Schody na górę
+                else if (choiceGround == "12")
+                {
+                    
+                }                
+                //Ekwipunek
+                else if (choiceGround == "13")
+                {
+                    methods.Clear();
+                    eq.ItemsDisplay();
+                    goto groundFloor;
+                }
             }
             
             //Piwnica

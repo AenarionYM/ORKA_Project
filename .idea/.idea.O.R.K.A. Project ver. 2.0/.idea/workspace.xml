@@ -22,14 +22,33 @@
     <select>
       <path>
         <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="BRANCH:origin/master" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:master" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="10ee8187-d4a6-45f8-929e-a94c508b472f" name="Default Changelist" comment="" />
+    <list default="true" id="10ee8187-d4a6-45f8-929e-a94c508b472f" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.O.R.K.A. Project ver. 2.0/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.O.R.K.A. Project ver. 2.0/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/O.R.K.A. Project ver. 2.0/Eq.cs" beforeDir="false" afterPath="$PROJECT_DIR$/O.R.K.A. Project ver. 2.0/Eq.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/O.R.K.A. Project ver. 2.0/Methods.cs" beforeDir="false" afterPath="$PROJECT_DIR$/O.R.K.A. Project ver. 2.0/Methods.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/O.R.K.A. Project ver. 2.0/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/O.R.K.A. Project ver. 2.0/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/O.R.K.A. Project ver. 2.0/bin/Debug/netcoreapp3.1/O.R.K.A. Project ver. 2.0.dll" beforeDir="false" afterPath="$PROJECT_DIR$/O.R.K.A. Project ver. 2.0/bin/Debug/netcoreapp3.1/O.R.K.A. Project ver. 2.0.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/O.R.K.A. Project ver. 2.0/bin/Debug/netcoreapp3.1/O.R.K.A. Project ver. 2.0.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/O.R.K.A. Project ver. 2.0/bin/Debug/netcoreapp3.1/O.R.K.A. Project ver. 2.0.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/O.R.K.A. Project ver. 2.0/bin/Debug/netcoreapp3.1/O.R.K.A. Project ver. 2.0.runtimeconfig.dev.json" beforeDir="false" afterPath="$PROJECT_DIR$/O.R.K.A. Project ver. 2.0/bin/Debug/netcoreapp3.1/O.R.K.A. Project ver. 2.0.runtimeconfig.dev.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/O.R.K.A. Project ver. 2.0/obj/Debug/netcoreapp3.1/O.R.K.A. Project ver. 2.0.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/O.R.K.A. Project ver. 2.0/obj/Debug/netcoreapp3.1/O.R.K.A. Project ver. 2.0.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/O.R.K.A. Project ver. 2.0/obj/Debug/netcoreapp3.1/O.R.K.A. Project ver. 2.0.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/O.R.K.A. Project ver. 2.0/obj/Debug/netcoreapp3.1/O.R.K.A. Project ver. 2.0.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/O.R.K.A. Project ver. 2.0/obj/Debug/netcoreapp3.1/O.R.K.A. Project ver. 2.0.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/O.R.K.A. Project ver. 2.0/obj/Debug/netcoreapp3.1/O.R.K.A. Project ver. 2.0.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/O.R.K.A. Project ver. 2.0/obj/Debug/netcoreapp3.1/O.R.K.A. Project ver. 2.0.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/O.R.K.A. Project ver. 2.0/obj/Debug/netcoreapp3.1/O.R.K.A. Project ver. 2.0.csprojAssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/O.R.K.A. Project ver. 2.0/obj/Debug/netcoreapp3.1/O.R.K.A. Project ver. 2.0.dll" beforeDir="false" afterPath="$PROJECT_DIR$/O.R.K.A. Project ver. 2.0/obj/Debug/netcoreapp3.1/O.R.K.A. Project ver. 2.0.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/O.R.K.A. Project ver. 2.0/obj/Debug/netcoreapp3.1/O.R.K.A. Project ver. 2.0.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/O.R.K.A. Project ver. 2.0/obj/Debug/netcoreapp3.1/O.R.K.A. Project ver. 2.0.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/O.R.K.A. Project ver. 2.0/obj/O.R.K.A. Project ver. 2.0.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/O.R.K.A. Project ver. 2.0/obj/O.R.K.A. Project ver. 2.0.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/O.R.K.A. Project ver. 2.0/obj/O.R.K.A. Project ver. 2.0.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/O.R.K.A. Project ver. 2.0/obj/O.R.K.A. Project ver. 2.0.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/O.R.K.A. Project ver. 2.0/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/O.R.K.A. Project ver. 2.0/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/O.R.K.A. Project ver. 2.0/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/O.R.K.A. Project ver. 2.0/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/O.R.K.A. Project ver. 2.0/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/O.R.K.A. Project ver. 2.0/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/O.R.K.A. Project ver. 2.0/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/O.R.K.A. Project ver. 2.0/obj/rider.project.restore.info" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -39,14 +58,16 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RESET_MODE" value="HARD" />
   </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="mock://C:/Users/JAVR Warg/Desktop/O.R.K.A Project v2.0/ORKA_Project/O.R.K.A. Project ver. 2.0/Program.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/JAVR Warg/Desktop/O.R.K.A Project v2.0/ORKA_Project/O.R.K.A. Project ver. 2.0/Methods.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/JAVR Warg/Desktop/O.R.K.A Project v2.0/ORKA_Project/O.R.K.A. Project ver. 2.0/Program.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/JAVR Warg/Desktop/O.R.K.A Project v2.0/ORKA_Project/O.R.K.A. Project ver. 2.0/Menu.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/JAVR Warg/Desktop/O.R.K.A Project v2.0/ORKA_Project/O.R.K.A. Project ver. 2.0/Program.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/JAVR Warg/Desktop/O.R.K.A Project v2.0/ORKA_Project/O.R.K.A. Project ver. 2.0/Program.cs" root0="SKIP_HIGHLIGHTING" />
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/O.R.K.A. Project ver. 2.0/Methods.cs" />
+        <option value="$PROJECT_DIR$/O.R.K.A. Project ver. 2.0/Program.cs" />
+        <option value="$PROJECT_DIR$/O.R.K.A. Project ver. 2.0/Eq.cs" />
+      </list>
+    </option>
   </component>
+  <component name="ProjectId" id="1jF5ZBp6GVzArgKziCyGh4x05Fo" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -58,6 +79,44 @@
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
+  <component name="RunManager">
+    <configuration name="O.R.K.A Project debug" type="DotNetProject" factoryName=".NET Project">
+      <option name="EXE_PATH" value="$PROJECT_DIR$/O.R.K.A. Project ver. 2.0/bin/Debug/netcoreapp3.1/O.R.K.A. Project ver. 2.0.dll" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/O.R.K.A. Project ver. 2.0/bin/Debug/netcoreapp3.1" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="USE_MONO" value="0" />
+      <option name="RUNTIME_ARGUMENTS" value="" />
+      <option name="PROJECT_PATH" value="$PROJECT_DIR$/O.R.K.A. Project ver. 2.0/O.R.K.A. Project ver. 2.0.csproj" />
+      <option name="PROJECT_EXE_PATH_TRACKING" value="1" />
+      <option name="PROJECT_ARGUMENTS_TRACKING" value="1" />
+      <option name="PROJECT_WORKING_DIRECTORY_TRACKING" value="1" />
+      <option name="PROJECT_KIND" value="DotNetCore" />
+      <option name="PROJECT_TFM" value=".NETCoreApp,Version=v3.1" />
+      <method v="2">
+        <option name="Build" />
+      </method>
+    </configuration>
+    <configuration default="true" type="DotNetProject" factoryName=".NET Project">
+      <option name="EXE_PATH" value="$PROJECT_DIR$/O.R.K.A. Project ver. 2.0/bin/Debug/netcoreapp3.1/O.R.K.A. Project ver. 2.0.exe" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/O.R.K.A. Project ver. 2.0/bin/Debug/netcoreapp3.1" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="USE_MONO" value="0" />
+      <option name="RUNTIME_ARGUMENTS" value="" />
+      <option name="PROJECT_PATH" value="$PROJECT_DIR$/O.R.K.A. Project ver. 2.0/O.R.K.A. Project ver. 2.0.csproj" />
+      <option name="PROJECT_EXE_PATH_TRACKING" value="0" />
+      <option name="PROJECT_ARGUMENTS_TRACKING" value="1" />
+      <option name="PROJECT_WORKING_DIRECTORY_TRACKING" value="1" />
+      <option name="PROJECT_KIND" value="DotNetCore" />
+      <option name="PROJECT_TFM" value=".NETCoreApp,Version=v3.1" />
+      <method v="2">
+        <option name="Build" />
+      </method>
+    </configuration>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -67,13 +126,24 @@
       <option name="presentableId" value="Default" />
       <updated>1603386145183</updated>
       <workItem from="1603386148815" duration="876000" />
+      <workItem from="1603387056400" duration="737000" />
+      <workItem from="1603387938879" duration="339000" />
+      <workItem from="1603388365343" duration="10556000" />
     </task>
+    <task id="LOCAL-00001" summary="EQ backend zrobiony + jakieś pliki od gita bo go pojebało">
+      <created>1603387171700</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1603387171700</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
-  <component name="UnityProjectConfiguration" hasMinimizedUI="null" />
+  <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -86,7 +156,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="origin/master" />
+                        <option value="master" />
                       </list>
                     </value>
                   </entry>
@@ -97,19 +167,50 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+    <MESSAGE value="EQ backend zrobiony + jakieś pliki od gita bo go pojebało" />
+    <option name="LAST_COMMIT_MESSAGE" value="EQ backend zrobiony + jakieś pliki od gita bo go pojebało" />
   </component>
   <component name="WindowStateProjectService">
     <state x="708" y="344" key="#Notifications" timestamp="1603386335963">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="708" y="344" key="#Notifications/0.0.1920.1040/1920.132.1280.984@0.0.1920.1040" timestamp="1603386335963" />
+    <state x="414" y="174" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1603388405587">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="414" y="174" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040/1920.132.1280.984@0.0.1920.1040" timestamp="1603388405587" />
+    <state x="827" y="269" key="EnvironmentVariablesDialog" timestamp="1603388260235">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="827" y="269" key="EnvironmentVariablesDialog/0.0.1920.1040/1920.132.1280.984@0.0.1920.1040" timestamp="1603388260235" />
+    <state width="1519" height="737" key="GridCell.Tab.0.bottom" timestamp="1603396714706">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1519" height="737" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.132.1280.984@0.0.1920.1040" timestamp="1603396714706" />
+    <state width="1519" height="737" key="GridCell.Tab.0.center" timestamp="1603396714706">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1519" height="737" key="GridCell.Tab.0.center/0.0.1920.1040/1920.132.1280.984@0.0.1920.1040" timestamp="1603396714706" />
+    <state width="1519" height="737" key="GridCell.Tab.0.left" timestamp="1603396714706">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1519" height="737" key="GridCell.Tab.0.left/0.0.1920.1040/1920.132.1280.984@0.0.1920.1040" timestamp="1603396714706" />
+    <state width="1519" height="737" key="GridCell.Tab.0.right" timestamp="1603396714706">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1519" height="737" key="GridCell.Tab.0.right/0.0.1920.1040/1920.132.1280.984@0.0.1920.1040" timestamp="1603396714706" />
     <state x="461" y="164" key="SettingsEditor" timestamp="1603386938767">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="164" key="SettingsEditor/0.0.1920.1040/1920.132.1280.984@0.0.1920.1040" timestamp="1603386938767" />
+    <state x="92" y="92" width="1736" height="856" key="VCS.FileHistoryDialog" timestamp="1603387793452">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="92" y="92" width="1736" height="856" key="VCS.FileHistoryDialog/0.0.1920.1040/1920.132.1280.984@0.0.1920.1040" timestamp="1603387793452" />
     <state x="552" y="252" key="Vcs.Push.Dialog.v2" timestamp="1603386645414">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -118,5 +219,17 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="92" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1920.1040/1920.132.1280.984@0.0.1920.1040" timestamp="1603387025627" />
+    <state x="586" y="190" width="1413" height="718" key="dock-window-1" timestamp="1603387531314">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="586" y="190" width="1413" height="718" key="dock-window-1/0.0.1920.1040/1920.132.1280.984@0.0.1920.1040" timestamp="1603387531314" />
+    <state x="616" y="240" key="run.anything.popup" timestamp="1603394592837">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040/1920.132.1280.984@0.0.1920.1040" timestamp="1603394592837" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1603395232741">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.132.1280.984@0.0.1920.1040" timestamp="1603395232741" />
   </component>
 </project>

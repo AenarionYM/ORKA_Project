@@ -8,19 +8,19 @@
     ".NETCoreApp,Version=v3.1": []
   },
   "packageFolders": {
-    "C:\\Users\\janus\\.nuget\\packages\\": {}
+    "C:\\Users\\JAVR Warg\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "Z:\\Rider\\O.R.K.A. Project ver. 2.0\\O.R.K.A. Project ver. 2.0\\O.R.K.A. Project ver. 2.0.csproj",
+      "projectUniqueName": "C:\\Users\\JAVR Warg\\Desktop\\O.R.K.A Project v2.0\\ORKA_Project\\O.R.K.A. Project ver. 2.0\\O.R.K.A. Project ver. 2.0.csproj",
       "projectName": "O.R.K.A. Project ver. 2.0",
-      "projectPath": "Z:\\Rider\\O.R.K.A. Project ver. 2.0\\O.R.K.A. Project ver. 2.0\\O.R.K.A. Project ver. 2.0.csproj",
-      "packagesPath": "C:\\Users\\janus\\.nuget\\packages\\",
-      "outputPath": "Z:\\Rider\\O.R.K.A. Project ver. 2.0\\O.R.K.A. Project ver. 2.0\\obj\\",
+      "projectPath": "C:\\Users\\JAVR Warg\\Desktop\\O.R.K.A Project v2.0\\ORKA_Project\\O.R.K.A. Project ver. 2.0\\O.R.K.A. Project ver. 2.0.csproj",
+      "packagesPath": "C:\\Users\\JAVR Warg\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\JAVR Warg\\Desktop\\O.R.K.A Project v2.0\\ORKA_Project\\O.R.K.A. Project ver. 2.0\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\janus\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\JAVR Warg\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

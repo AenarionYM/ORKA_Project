@@ -25,7 +25,7 @@ namespace O.R.K.A._Project_ver._2._0
             Console.ReadLine();
         }
 
-        public void els()
+        public void Els()
         {
             Console.WriteLine("Dev Log: Jesteś debilem");
             Sleep(1000);
