@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\JAVR Warg\AppData\Local\JetBrains\Rider2020.2\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\JAVR Warg\AppData\Local\JetBrains\Rider2020.2\resharper-host\Local\Transient\Rider\v202\SolutionCaches\_O.R.K.A. Project ver. 2.0.-1036376739.00" t="ExcludeRecursive" />
+    <e p="C:\Users\JAVR Warg\Desktop\O.R.K.A Project v2.0\ORKA_Project" t="IncludeFlat">
+      <e p="O.R.K.A. Project ver. 2.0" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Eq.cs" t="Include" />
+        <e p="Menu.cs" t="Include" />
+        <e p="Methods.cs" t="Include" />
+        <e p="O.R.K.A. Project ver. 2.0.csproj" t="IncludeRecursive" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp3.1" t="Include">
+              <e p="O.R.K.A. Project ver. 2.0.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Program.cs" t="Include" />
+      </e>
+      <e p="O.R.K.A. Project ver. 2.0.sln" t="IncludeFlat" />
+      <e p="packages" t="ExcludeRecursive" />
+    </e>
+  </component>
+</project>
