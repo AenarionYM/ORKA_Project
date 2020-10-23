@@ -125,6 +125,10 @@ namespace O.R.K.A._Project_ver._2._0
              else if (choiseToEnter == "1337")
              {
                  eq.Items.Add(Item.Extingusher);
+                 eq.Items.Add(Item.DrinkOfYouth);
+                 eq.Items.Add(Item.BatonOfPower);
+                 eq.Items.Add(Item.CrispsOfImmortality);
+                 eq.Items.Add(Item.Code);
                  methods.Clear();
                  eq.ItemsDisplay();
                  goto front;
