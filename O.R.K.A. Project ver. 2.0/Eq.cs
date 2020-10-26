@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 
 namespace O.R.K.A._Project_ver._2._0
@@ -10,6 +11,7 @@ namespace O.R.K.A._Project_ver._2._0
         public List<Item> Items = new List<Item>() { };
         public Item equippedWeapon;
         public Item equippedShield;
+        public int count;
 
         int[] dmgCalculator(Item item)
         {
@@ -20,6 +22,7 @@ namespace O.R.K.A._Project_ver._2._0
             int[] dmgArray = {maxDmgShow, minDmgShow};
             return dmgArray;
         }
+        
         public void ItemsDisplay()
         {
             //Może się przydać
@@ -31,25 +34,36 @@ namespace O.R.K.A._Project_ver._2._0
             //Items Display
             if (Items.Any())
             {
-                int count = 1;
+                count = 1; 
                 foreach (var Item in Items)
                 {
                     Console.WriteLine($"{count}. {Item.name}");
                     count++;
                     methods.Sleep(200);
                 }
-
+                //Display Weapon
                 if (equippedWeapon != null)
                 {
-                    Console.WriteLine($"\nUżywana broń: {equippedWeapon.name}");
-                    Console.WriteLine($"obrażenia: {dmgCalculator(equippedWeapon).Min()} - {dmgCalculator(equippedWeapon).Max()}");
+                    Console.WriteLine($"\n{count}. Używana broń: {equippedWeapon.name}");
+                    Console.WriteLine($"Obrażenia: {dmgCalculator(equippedWeapon).Min()} - {dmgCalculator(equippedWeapon).Max()}");
                 }
                 else
                 {
-                    Console.WriteLine($"\nUżywana broń: Brak");
-                    Console.WriteLine($"obrażenia: 0 - 0");
+                    Console.WriteLine($"\n{count}. Używana broń: Brak");
+                    Console.WriteLine("Obrażenia: 0 - 0");
                 }
-                Console.WriteLine("\n0. Wyjdź");
+                //Display Shield
+                if (equippedShield != null)
+                {
+                    Console.WriteLine($"\n{count + 1}. Używana tarcza: {equippedShield.name}");
+                    Console.WriteLine($"Obrona: {equippedShield.parry}");
+                }
+                else
+                {
+                    Console.WriteLine($"\n{count + 1}. Używana tarcza: Brak");
+                    Console.WriteLine("Obrona: 0");
+                }
+                Console.WriteLine("\n0. Wyjdź\n");
             }
             else
             {
@@ -60,14 +74,75 @@ namespace O.R.K.A._Project_ver._2._0
             //Choose Item
             string eqChoice = Console.ReadLine();
             bool isNumber = int.TryParse(eqChoice, out int eqChoiceInt);
-
+            
             if (isNumber)
             {
-                eqChoiceInt -= 1;
+                eqChoiceInt --;
+                count --;
                 
                 if (eqChoiceInt == -1)
                 {
                     methods.Clear();
+                }
+                else if (eqChoiceInt == count && equippedWeapon == null)
+                {
+                    methods.Clear();
+                    Console.WriteLine("Nie mam kurwa broni!");
+                    methods.Ent();
+                    goto eqStart;
+                }
+                else if (eqChoiceInt == count + 1 && equippedShield == null)
+                {
+                    methods.Clear();
+                    Console.WriteLine("Nie mam kurwa tarczy!");
+                    methods.Ent();
+                    goto eqStart;
+                }
+                else if (eqChoiceInt == count && equippedWeapon != null)
+                {
+                    methods.Clear();
+                    Console.WriteLine(equippedWeapon.name);
+                    Console.WriteLine(equippedWeapon.description);
+                    Console.WriteLine("\n1. Zdejmij");
+                    Console.WriteLine("2. Wróć");
+
+                    string itemEquipChoice = Console.ReadLine();
+
+                    if (itemEquipChoice == "1")
+                    {
+                        Items.Add(equippedWeapon);
+                        Console.WriteLine($"Odkładasz {equippedWeapon.name}");
+                        equippedWeapon = null;
+                        goto eqStart;
+                    }
+
+                    if (itemEquipChoice == "2")
+                    {
+                        goto eqStart;
+                    }
+                }
+                else if (eqChoiceInt == count + 1 && equippedShield != null)
+                {
+                    methods.Clear();
+                    Console.WriteLine(equippedShield.name);
+                    Console.WriteLine(equippedShield.description);
+                    Console.WriteLine("\n1. Zdejmij");
+                    Console.WriteLine("2. Wróć");
+
+                    string itemEquipChoice = Console.ReadLine();
+
+                    if (itemEquipChoice == "1")
+                    {
+                        Items.Add(equippedShield);
+                        Console.WriteLine($"Odkładasz {equippedShield.name}");
+                        equippedShield = null;
+                        goto eqStart;
+                    }
+
+                    if (itemEquipChoice == "2")
+                    {
+                        goto eqStart;
+                    }
                 }
                 else if (Items.Count > eqChoiceInt && Items[eqChoiceInt] != null)
                 {
@@ -88,13 +163,16 @@ namespace O.R.K.A._Project_ver._2._0
                         
                         else if (itemChoice == "1" && Items[eqChoiceInt].isWeapon)
                         {
+                            if (equippedWeapon != null)
+                            {
+                                Items.Add(equippedWeapon);
+                            }
                             equippedWeapon = Items[eqChoiceInt];
                             Console.WriteLine($"Używasz {Items[eqChoiceInt].name}");
                             Items.Remove(Items[eqChoiceInt]);
                             methods.Ent();
                             goto eqStart;
                         }
-                        
                         else if (itemChoice == "1" && Items[eqChoiceInt].isShield)
                         {
                             equippedShield = Items[eqChoiceInt];
@@ -102,49 +180,46 @@ namespace O.R.K.A._Project_ver._2._0
                             Items.Remove(Items[eqChoiceInt]);
                             methods.Ent();
                             goto eqStart;
+                        }  
+                        
+                        else if (Items[eqChoiceInt] == Item.CoffeMilk)
+                        {
+                            Console.WriteLine("\nŻycie zwiększone");
+                            //Dodaje 75 życia
+                            Items.Remove(Item.CoffeMilk);
+                            methods.Ent();
+                            goto eqStart;
+                        }
+                        else if (Items[eqChoiceInt] == Item.DrinkOfYouth)
+                        {
+                            Console.WriteLine("\n*HUMANITY RESTORED*");
+                            //Przywraca 60 hp
+                            Items.Remove(Item.DrinkOfYouth);
+                            methods.Ent();
+                            goto eqStart;
+                        }
+                        //Dorobić ifa na inCombat
+                        else if (Items[eqChoiceInt] == Item.BatonOfPower)
+                        {
+                            Console.WriteLine("\nSiła zwiększona");
+                            //Dodatkowe 10 obrażeń do końca walki
+                            Items.Remove(Item.BatonOfPower);
+                            methods.Ent();
+                            goto eqStart;
+                        }
+                        else if (Items[eqChoiceInt] == Item.CrispsOfImmortality)
+                        {
+                            Console.WriteLine("\nObrona zwiększona");
+                            //Dodatkowe 10 obrony do końca walki
+                            Items.Remove(Item.CrispsOfImmortality);
+                            methods.Ent();
+                            goto eqStart;
                         }
                         
                         else
-                        {                            
-                            if (Items[eqChoiceInt] == Item.CoffeMilk)
-                            {
-                                Console.WriteLine("\nŻycie zwiększone");
-                                //Dodaje 75 życia
-                                Items.Remove(Item.CoffeMilk);
-                                methods.Ent();
-                                goto eqStart;
-                            }
-                            else if (Items[eqChoiceInt] == Item.DrinkOfYouth)
-                            {
-                                Console.WriteLine("\n*HUMANITY RESTORED*");
-                                //Przywraca 60 hp
-                                Items.Remove(Item.DrinkOfYouth);
-                                methods.Ent();
-                                goto eqStart;
-                            }
-                            //Dorobić ifa na inCombat
-                            else if (Items[eqChoiceInt] == Item.BatonOfPower)
-                            {
-                                Console.WriteLine("\nSiła zwiększona");
-                                //Dodatkowe 10 obrażeń do końca walki
-                                Items.Remove(Item.BatonOfPower);
-                                methods.Ent();
-                                goto eqStart;
-                            }
-                            else if (Items[eqChoiceInt] == Item.CrispsOfImmortality)
-                            {
-                                Console.WriteLine("\nObrona zwiększona");
-                                //Dodatkowe 10 obrony do końca walki
-                                Items.Remove(Item.CrispsOfImmortality);
-                                methods.Ent();
-                                goto eqStart;
-                            }
-                            else
-                            {
-                                Console.WriteLine("\nCoś się ewidentnie zebao");
-                                methods.Ent();
-                                goto eqStart;
-                            }
+                        {
+                            methods.Els();
+                            goto eqStart;
                         }
                     }
                     else
@@ -169,42 +244,19 @@ namespace O.R.K.A._Project_ver._2._0
                 methods.Ent();
                 goto eqStart;
             }
-            
-            
-            //For debug only
-            /*{
-                foreach (Item Item in Items)
-                {
-                    int count = 1;
-                    Console.WriteLine(
-                        $"{count}. " +
-                        $"name:{Item.name} " +
-                        $"{Item.dmgMinHead} " +
-                        $"{Item.dmgMaxHead} " +
-                        $"{Item.dmgMinBody} " +
-                        $"{Item.dmgMaxBody} " +
-                        $"{Item.dmgMinLegs} " +
-                        $"{Item.dmgMaxLegs}"
-                        );
-                    count++;
-                    methods.Sleep(500);
-                }*/
         }
     }
     public class Item
     {
-        public string name;
-        public string description;
-        public bool usable;
-        public bool isShield;
-        public int parry;
-        public int dmgMinHead;
-        public int dmgMaxHead;
-        public int dmgMinBody;
-        public int dmgMaxBody;
-        public int dmgMinLegs;
-        public int dmgMaxLegs;
-        public bool isWeapon;
+        public string name, description;
+        public bool usable, isShield, isWeapon;
+        public int parry, 
+            dmgMinHead, 
+            dmgMaxHead, 
+            dmgMinBody, 
+            dmgMaxBody, 
+            dmgMinLegs, 
+            dmgMaxLegs;
         
         public Item
             (string name,
@@ -231,6 +283,7 @@ namespace O.R.K.A._Project_ver._2._0
             this.dmgMaxBody = dmgMaxBody;
             this.dmgMinLegs = dmgMinLegs;
             this.dmgMaxLegs = dmgMaxLegs;
+            this.isWeapon = isWeapon;
         }
 
         #region Items Database
