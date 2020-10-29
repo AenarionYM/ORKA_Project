@@ -12,6 +12,11 @@ namespace O.R.K.A._Project_ver._2._0
         {
             System.Threading.Thread.Sleep(time);
         }
+        
+        public void SleepEq()
+        {
+            System.Threading.Thread.Sleep(100);
+        }
 
         public void Clear()
         {

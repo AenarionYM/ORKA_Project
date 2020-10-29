@@ -9,9 +9,46 @@ namespace O.R.K.A._Project_ver._2._0
     {
         Methods methods = new Methods();
         public List<Item> Items = new List<Item>() { };
+        public List<Item> ItemsDebug = new List<Item>()
+        {
+            Item.Jacket, 
+            Item.Code, 
+            Item.Milk, 
+            Item.Rope, 
+            Item.Dell, 
+            Item.Hp, 
+            Item.ThinkPad,
+            Item.WygasPc,
+            Item.BrokenMouse,
+            Item.C4,
+            Item.KeyTo17,
+            Item.RepairKit,
+            Item.Coin,
+            Item.Jbl,
+            Item.UsbKiller,
+            Item.CoffeMilk,
+            Item.DrinkOfYouth,
+            Item.BatonOfPower,
+            Item.CrispsOfImmortality,
+            Item.Axe,
+            Item.Rabab,
+            Item.Thermos,
+            Item.ThermosWater,
+            Item.ThermosTea,
+            Item.Extingusher,
+            Item.Lightsaber,
+            Item.StaffOfSosnowiec,
+            Item.Secator,
+            Item.Hand,
+            Item.Desk,
+            Item.DeskUpgraded,
+            Item.ParryHand,
+            Item.Doors,
+            Item.Fap3000
+        };
         public Item equippedWeapon;
         public Item equippedShield;
-        public int count;
+        int count;
 
         int[] dmgCalculator(Item item)
         {
@@ -21,6 +58,92 @@ namespace O.R.K.A._Project_ver._2._0
             int maxDmgShow = Math.Max(maxDmgChck, item.dmgMaxLegs);
             int[] dmgArray = {maxDmgShow, minDmgShow};
             return dmgArray;
+        }
+
+        void ItemsDebugDispaly()
+        {
+            methods.Clear();
+            count = 1;
+            //Display
+            foreach (var item in ItemsDebug)
+            {
+                Console.WriteLine($"{count}. {item.name}");
+                count++;
+            }
+            methods.SleepEq();
+            Console.WriteLine("\n0. Wyjdź\n");
+
+            //Choose Item
+            string eqChoice = Console.ReadLine();
+            bool isNumber = int.TryParse(eqChoice, out int eqChoiceInt);
+            methods.Clear();
+            
+            if (isNumber && eqChoice != "")
+            {
+                eqChoiceInt--;
+                count--;
+                
+                if (eqChoiceInt == -1) {ItemsDisplay();}
+                
+                else if (ItemsDebug.Count > eqChoiceInt && ItemsDebug[eqChoiceInt] != null)
+                {
+                    Console.WriteLine(ItemsDebug[eqChoiceInt].name);
+                    Console.WriteLine(ItemsDebug[eqChoiceInt].description);
+                    if (Items.Contains(ItemsDebug[eqChoiceInt]))
+                    {
+                        Console.WriteLine("1. Usuń");
+                    }
+                    else if (!Items.Contains(ItemsDebug[eqChoiceInt]))
+                    {
+                        Console.WriteLine("1. Dodaj");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Zepsute");
+                    }
+                    Console.WriteLine("2. Cofnij\n");
+
+                    string itemChoice = Console.ReadLine();
+
+                    if (itemChoice == "1" && Items.Contains(ItemsDebug[eqChoiceInt]))
+                    {
+                        Items.Remove(ItemsDebug[eqChoiceInt]);
+                        ItemsDebugDispaly();
+                    }                    
+                    if (itemChoice == "1" && !Items.Contains(ItemsDebug[eqChoiceInt]))
+                    {
+                        Items.Add(ItemsDebug[eqChoiceInt]);
+                        ItemsDebugDispaly();
+                    }
+
+                    else if(itemChoice == "2")
+                    {
+                        ItemsDebugDispaly();
+                    }
+                    else
+                    {
+                        methods.Els();
+                        ItemsDebugDispaly();
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("Wprowadź poprawną liczbę");
+                    methods.Ent();
+                    ItemsDebugDispaly();
+                }
+            }
+            else if (!isNumber && eqChoice != "")
+            {
+                methods.Clear();
+                Console.WriteLine("Wprowadź poprawną LICZBĘ");
+                methods.Ent();
+                ItemsDebugDispaly();
+            }
+            else
+            {
+                ItemsDebugDispaly();
+            }
         }
         
         public void ItemsDisplay()
@@ -35,34 +158,40 @@ namespace O.R.K.A._Project_ver._2._0
             if (Items.Any())
             {
                 count = 1; 
-                foreach (var Item in Items)
+                foreach (var item in Items)
                 {
-                    Console.WriteLine($"{count}. {Item.name}");
+                    Console.WriteLine($"{count}. {item.name}");
                     count++;
-                    methods.Sleep(200);
+                    methods.SleepEq();
                 }
                 //Display Weapon
                 if (equippedWeapon != null)
                 {
                     Console.WriteLine($"\n{count}. Używana broń: {equippedWeapon.name}");
+                    methods.SleepEq();
                     Console.WriteLine($"Obrażenia: {dmgCalculator(equippedWeapon).Min()} - {dmgCalculator(equippedWeapon).Max()}");
                 }
                 else
                 {
                     Console.WriteLine($"\n{count}. Używana broń: Brak");
+                    methods.SleepEq();
                     Console.WriteLine("Obrażenia: 0 - 0");
                 }
+                methods.SleepEq();
                 //Display Shield
                 if (equippedShield != null)
                 {
                     Console.WriteLine($"\n{count + 1}. Używana tarcza: {equippedShield.name}");
+                    methods.SleepEq();
                     Console.WriteLine($"Obrona: {equippedShield.parry}");
                 }
                 else
                 {
                     Console.WriteLine($"\n{count + 1}. Używana tarcza: Brak");
+                    methods.SleepEq();
                     Console.WriteLine("Obrona: 0");
                 }
+                methods.SleepEq();
                 Console.WriteLine("\n0. Wyjdź\n");
             }
             else
@@ -74,33 +203,29 @@ namespace O.R.K.A._Project_ver._2._0
             //Choose Item
             string eqChoice = Console.ReadLine();
             bool isNumber = int.TryParse(eqChoice, out int eqChoiceInt);
+            methods.Clear();
             
-            if (isNumber)
+            if (isNumber && eqChoice != "")
             {
                 eqChoiceInt --;
                 count --;
-                
-                if (eqChoiceInt == -1)
-                {
-                    methods.Clear();
-                }
+                //Exit
+                if (eqChoiceInt == -1) {}
+                //If weapon or shield equipped
                 else if (eqChoiceInt == count && equippedWeapon == null)
                 {
-                    methods.Clear();
                     Console.WriteLine("Nie mam kurwa broni!");
                     methods.Ent();
                     goto eqStart;
                 }
                 else if (eqChoiceInt == count + 1 && equippedShield == null)
                 {
-                    methods.Clear();
                     Console.WriteLine("Nie mam kurwa tarczy!");
                     methods.Ent();
                     goto eqStart;
                 }
                 else if (eqChoiceInt == count && equippedWeapon != null)
                 {
-                    methods.Clear();
                     Console.WriteLine(equippedWeapon.name);
                     Console.WriteLine(equippedWeapon.description);
                     Console.WriteLine("\n1. Zdejmij");
@@ -116,14 +241,19 @@ namespace O.R.K.A._Project_ver._2._0
                         goto eqStart;
                     }
 
-                    if (itemEquipChoice == "2")
+                    else if (itemEquipChoice == "2")
                     {
+                        goto eqStart;
+                    }
+
+                    else
+                    {
+                        methods.Els();
                         goto eqStart;
                     }
                 }
                 else if (eqChoiceInt == count + 1 && equippedShield != null)
                 {
-                    methods.Clear();
                     Console.WriteLine(equippedShield.name);
                     Console.WriteLine(equippedShield.description);
                     Console.WriteLine("\n1. Zdejmij");
@@ -139,14 +269,20 @@ namespace O.R.K.A._Project_ver._2._0
                         goto eqStart;
                     }
 
-                    if (itemEquipChoice == "2")
+                    else if (itemEquipChoice == "2")
                     {
                         goto eqStart;
                     }
+
+                    else
+                    {
+                        methods.Els();
+                        goto eqStart;
+                    }
                 }
+                //Items use
                 else if (Items.Count > eqChoiceInt && Items[eqChoiceInt] != null)
                 {
-                    methods.Clear();
                     Console.WriteLine(Items[eqChoiceInt].description);
                     if (Items[eqChoiceInt].usable)
                     {
@@ -229,19 +365,26 @@ namespace O.R.K.A._Project_ver._2._0
                         goto eqStart;
                     }
                 }
+                //Debug
+                else if (eqChoiceInt == 2353)
+                {
+                    ItemsDebugDispaly();
+                }
                 else
                 {
-                    methods.Clear();
                     Console.WriteLine("Wprowadź poprawną liczbę");
                     methods.Ent();
                     goto eqStart;
                 }
             }
-            else
+            else if (!isNumber && eqChoice != "")
             {
-                methods.Clear();
                 Console.WriteLine("Wprowadź poprawną LICZBĘ");
                 methods.Ent();
+                goto eqStart;
+            }
+            else
+            { 
                 goto eqStart;
             }
         }
