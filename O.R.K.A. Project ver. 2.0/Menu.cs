@@ -34,9 +34,9 @@ namespace O.R.K.A._Project_ver._2._0
                     Console.WriteLine("           777777              7777777           77777777777      7777777777        7777       77777777777");
 
 
-                    methods.Ent();
+                    Methods.Ent();
                 GG:
-                    methods.Clear();
+                    Methods.Clear();
 
                     Console.ForegroundColor = ConsoleColor.DarkRed;
 

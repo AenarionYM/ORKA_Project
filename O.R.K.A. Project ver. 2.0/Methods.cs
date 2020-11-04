@@ -1,40 +1,47 @@
 ﻿using System;
-using System.Diagnostics;
-using System.IO;
-using System.Linq;
 
 
 namespace O.R.K.A._Project_ver._2._0
 {
     public class Methods
     {
-        public void Sleep(int time)
+        public static void Sleep(int time)
         {
             System.Threading.Thread.Sleep(time);
         }
         
-        public void SleepEq()
+        public static void SleepEq()
         {
             System.Threading.Thread.Sleep(100);
         }
 
-        public void Clear()
+        public static void Clear()
         {
             Console.Clear();
         }
 
-        public void Ent()
+        public static void Ent()
         {
             Console.WriteLine("");
             Console.WriteLine("Press enter to continue...");
             Console.ReadLine();
         }
 
-        public void Els()
+        public static void Els()
         {
             Console.WriteLine("Dev Log: Jesteś debilem");
-            Sleep(1000);
+            Sleep(500);
             Ent();
+        }
+
+        public static void Rep()
+        {
+            Console.WriteLine("\n*Dostałeś naganę*");
+            Eq.reprimands++;
+            Sleep(500);
+            Console.WriteLine($"{Eq.reprimands} / 3");
+            Ent();
+            Clear();
         }
     }
 }

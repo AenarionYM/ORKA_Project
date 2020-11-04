@@ -1,13 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Linq;
 
 namespace O.R.K.A._Project_ver._2._0
 {
     public class Eq
     {
-        Methods methods = new Methods();
         public List<Item> Items = new List<Item>() { };
         public List<Item> ItemsDebug = new List<Item>()
         {
@@ -49,6 +47,7 @@ namespace O.R.K.A._Project_ver._2._0
         public Item equippedWeapon;
         public Item equippedShield;
         int count;
+        public static int reprimands = 0;
 
         int[] dmgCalculator(Item item)
         {
@@ -62,7 +61,7 @@ namespace O.R.K.A._Project_ver._2._0
 
         void ItemsDebugDispaly()
         {
-            methods.Clear();
+            Methods.Clear();
             count = 1;
             //Display
             foreach (var item in ItemsDebug)
@@ -70,13 +69,13 @@ namespace O.R.K.A._Project_ver._2._0
                 Console.WriteLine($"{count}. {item.name}");
                 count++;
             }
-            methods.SleepEq();
+            Methods.SleepEq();
             Console.WriteLine("\n0. Wyjdź\n");
 
             //Choose Item
             string eqChoice = Console.ReadLine();
             bool isNumber = int.TryParse(eqChoice, out int eqChoiceInt);
-            methods.Clear();
+            Methods.Clear();
             
             if (isNumber && eqChoice != "")
             {
@@ -87,8 +86,8 @@ namespace O.R.K.A._Project_ver._2._0
                 
                 else if (ItemsDebug.Count > eqChoiceInt && ItemsDebug[eqChoiceInt] != null)
                 {
-                    Console.WriteLine(ItemsDebug[eqChoiceInt].name);
-                    Console.WriteLine(ItemsDebug[eqChoiceInt].description);
+                    Console.WriteLine($"Name: {ItemsDebug[eqChoiceInt].name}");
+                    Console.WriteLine($"Descirption: {ItemsDebug[eqChoiceInt].description}");
                     if (Items.Contains(ItemsDebug[eqChoiceInt]))
                     {
                         Console.WriteLine("1. Usuń");
@@ -122,22 +121,22 @@ namespace O.R.K.A._Project_ver._2._0
                     }
                     else
                     {
-                        methods.Els();
+                        Methods.Els();
                         ItemsDebugDispaly();
                     }
                 }
                 else
                 {
                     Console.WriteLine("Wprowadź poprawną liczbę");
-                    methods.Ent();
+                    Methods.Ent();
                     ItemsDebugDispaly();
                 }
             }
             else if (!isNumber && eqChoice != "")
             {
-                methods.Clear();
+                Methods.Clear();
                 Console.WriteLine("Wprowadź poprawną LICZBĘ");
-                methods.Ent();
+                Methods.Ent();
                 ItemsDebugDispaly();
             }
             else
@@ -151,7 +150,7 @@ namespace O.R.K.A._Project_ver._2._0
             //Może się przydać
             //Item[] itemsArray = Items.ToArray();
             eqStart:
-            methods.Clear();
+            Methods.Clear();
             Console.WriteLine("EKWIPUNEK \n");
             
             //Items Display
@@ -162,36 +161,36 @@ namespace O.R.K.A._Project_ver._2._0
                 {
                     Console.WriteLine($"{count}. {item.name}");
                     count++;
-                    methods.SleepEq();
+                    Methods.SleepEq();
                 }
                 //Display Weapon
                 if (equippedWeapon != null)
                 {
                     Console.WriteLine($"\n{count}. Używana broń: {equippedWeapon.name}");
-                    methods.SleepEq();
+                    Methods.SleepEq();
                     Console.WriteLine($"Obrażenia: {dmgCalculator(equippedWeapon).Min()} - {dmgCalculator(equippedWeapon).Max()}");
                 }
                 else
                 {
                     Console.WriteLine($"\n{count}. Używana broń: Brak");
-                    methods.SleepEq();
+                    Methods.SleepEq();
                     Console.WriteLine("Obrażenia: 0 - 0");
                 }
-                methods.SleepEq();
+                Methods.SleepEq();
                 //Display Shield
                 if (equippedShield != null)
                 {
                     Console.WriteLine($"\n{count + 1}. Używana tarcza: {equippedShield.name}");
-                    methods.SleepEq();
+                    Methods.SleepEq();
                     Console.WriteLine($"Obrona: {equippedShield.parry}");
                 }
                 else
                 {
                     Console.WriteLine($"\n{count + 1}. Używana tarcza: Brak");
-                    methods.SleepEq();
+                    Methods.SleepEq();
                     Console.WriteLine("Obrona: 0");
                 }
-                methods.SleepEq();
+                Methods.SleepEq();
                 Console.WriteLine("\n0. Wyjdź\n");
             }
             else
@@ -203,7 +202,7 @@ namespace O.R.K.A._Project_ver._2._0
             //Choose Item
             string eqChoice = Console.ReadLine();
             bool isNumber = int.TryParse(eqChoice, out int eqChoiceInt);
-            methods.Clear();
+            Methods.Clear();
             
             if (isNumber && eqChoice != "")
             {
@@ -215,13 +214,13 @@ namespace O.R.K.A._Project_ver._2._0
                 else if (eqChoiceInt == count && equippedWeapon == null)
                 {
                     Console.WriteLine("Nie mam kurwa broni!");
-                    methods.Ent();
+                    Methods.Ent();
                     goto eqStart;
                 }
                 else if (eqChoiceInt == count + 1 && equippedShield == null)
                 {
                     Console.WriteLine("Nie mam kurwa tarczy!");
-                    methods.Ent();
+                    Methods.Ent();
                     goto eqStart;
                 }
                 else if (eqChoiceInt == count && equippedWeapon != null)
@@ -248,7 +247,7 @@ namespace O.R.K.A._Project_ver._2._0
 
                     else
                     {
-                        methods.Els();
+                        Methods.Els();
                         goto eqStart;
                     }
                 }
@@ -276,7 +275,7 @@ namespace O.R.K.A._Project_ver._2._0
 
                     else
                     {
-                        methods.Els();
+                        Methods.Els();
                         goto eqStart;
                     }
                 }
@@ -306,7 +305,7 @@ namespace O.R.K.A._Project_ver._2._0
                             equippedWeapon = Items[eqChoiceInt];
                             Console.WriteLine($"Używasz {Items[eqChoiceInt].name}");
                             Items.Remove(Items[eqChoiceInt]);
-                            methods.Ent();
+                            Methods.Ent();
                             goto eqStart;
                         }
                         else if (itemChoice == "1" && Items[eqChoiceInt].isShield)
@@ -314,7 +313,7 @@ namespace O.R.K.A._Project_ver._2._0
                             equippedShield = Items[eqChoiceInt];
                             Console.WriteLine($"Używasz {Items[eqChoiceInt].name}");
                             Items.Remove(Items[eqChoiceInt]);
-                            methods.Ent();
+                            Methods.Ent();
                             goto eqStart;
                         }  
                         
@@ -323,7 +322,7 @@ namespace O.R.K.A._Project_ver._2._0
                             Console.WriteLine("\nŻycie zwiększone");
                             //Dodaje 75 życia
                             Items.Remove(Item.CoffeMilk);
-                            methods.Ent();
+                            Methods.Ent();
                             goto eqStart;
                         }
                         else if (Items[eqChoiceInt] == Item.DrinkOfYouth)
@@ -331,7 +330,7 @@ namespace O.R.K.A._Project_ver._2._0
                             Console.WriteLine("\n*HUMANITY RESTORED*");
                             //Przywraca 60 hp
                             Items.Remove(Item.DrinkOfYouth);
-                            methods.Ent();
+                            Methods.Ent();
                             goto eqStart;
                         }
                         //Dorobić ifa na inCombat
@@ -340,7 +339,7 @@ namespace O.R.K.A._Project_ver._2._0
                             Console.WriteLine("\nSiła zwiększona");
                             //Dodatkowe 10 obrażeń do końca walki
                             Items.Remove(Item.BatonOfPower);
-                            methods.Ent();
+                            Methods.Ent();
                             goto eqStart;
                         }
                         else if (Items[eqChoiceInt] == Item.CrispsOfImmortality)
@@ -348,13 +347,13 @@ namespace O.R.K.A._Project_ver._2._0
                             Console.WriteLine("\nObrona zwiększona");
                             //Dodatkowe 10 obrony do końca walki
                             Items.Remove(Item.CrispsOfImmortality);
-                            methods.Ent();
+                            Methods.Ent();
                             goto eqStart;
                         }
                         
                         else
                         {
-                            methods.Els();
+                            Methods.Els();
                             goto eqStart;
                         }
                     }
@@ -373,14 +372,14 @@ namespace O.R.K.A._Project_ver._2._0
                 else
                 {
                     Console.WriteLine("Wprowadź poprawną liczbę");
-                    methods.Ent();
+                    Methods.Ent();
                     goto eqStart;
                 }
             }
             else if (!isNumber && eqChoice != "")
             {
                 Console.WriteLine("Wprowadź poprawną LICZBĘ");
-                methods.Ent();
+                Methods.Ent();
                 goto eqStart;
             }
             else

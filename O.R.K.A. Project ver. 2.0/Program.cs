@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Net.Mime;
 
 namespace O.R.K.A._Project_ver._2._0
 {
@@ -7,34 +6,35 @@ namespace O.R.K.A._Project_ver._2._0
     {
         static void Main(string[] args)
         {
-            
             //Konstruktory Klas//
-            Methods methods = new Methods();
             Menu menu = new Menu();
             Eq eq = new Eq();
             
             //Unlocker'y
             bool dyrkaWBramie = true;
+            bool loop = false;
+            bool zbyszekRatuje = false;
             
             //Achivments
             bool niespostrzezony = false;
+            bool segregacja = false;
             
-            //Nagany
-            int nagany = 0;
+            //Inty
+            int toiletEvent = 1;
             
             //Wstęp do gry
-            methods.Clear();
+            Methods.Clear();
             Console.WriteLine("Witaj w Project O.R.K.A.!");
-            methods.Sleep(350);
+            Methods.Sleep(350);
             Console.WriteLine("Jest to gra textowa w której wcielasz się w frajera który chodzi do TEB'u");
-            methods.Sleep(100);
+            Methods.Sleep(100);
             Console.WriteLine("Pomiędzy lekcjami spierdoliłeś do Ropuszki po Gorącego Psa z extra SSSOOOSSS");
-            methods.Sleep(200);
+            Methods.Sleep(200);
             Console.WriteLine("Reszte dowiesz(lub też nie) się podczas gry.");
-            methods.Sleep(200);
+            Methods.Sleep(200);
             Console.WriteLine("Miłej zabawy! - Zarząd TEB Studio");
-            methods.Ent();
-            methods.Clear();
+            Methods.Ent();
+            Methods.Clear();
             //Menu
             menu:
             menu._Menu();
@@ -43,32 +43,32 @@ namespace O.R.K.A._Project_ver._2._0
             if (menuChoice == "1")
             {
                 Console.WriteLine("Zapraszam!");
-                methods.Ent();
+                Methods.Ent();
                 goto front;
                 
             }
             else if (menuChoice == "2")
             {
                 Console.WriteLine("Zapraszam ponownie!");
-                methods.Ent();
+                Methods.Ent();
                 goto menu;
             }
             else if (menuChoice == "3")
             {
                 Console.WriteLine("No raczej nie");
-                methods.Ent();
+                Methods.Ent();
                 goto menu;
             }
             else if (menuChoice == "4")
             {
                 Console.WriteLine("No xD");
-                methods.Ent();
+                Methods.Ent();
                 System.Environment.Exit(0);
             }
             else
             {
                 Console.WriteLine("Jak ty głupi");
-                methods.Ent();
+                Methods.Ent();
                 goto menu;            
             }
 
@@ -76,13 +76,13 @@ namespace O.R.K.A._Project_ver._2._0
             front:
             {
                 
-             methods.Clear();
+             Methods.Clear();
              Console.WriteLine("Stoisz przed głównym budynkiem Technikum TEB Edukacja w Bielsku");
-             methods.Sleep(500);
+             Methods.Sleep(500);
              Console.WriteLine("Co robisz?");
-             methods.Sleep(500);
+             Methods.Sleep(500);
              Console.WriteLine("1. Wchodzisz");
-             methods.Sleep(500);
+             Methods.Sleep(500);
              Console.WriteLine("2. Odchodzisz");
              string choiseToEnter = Console.ReadLine();
 
@@ -92,16 +92,16 @@ namespace O.R.K.A._Project_ver._2._0
                  if (dyrkaWBramie == true)
                  {
                      dyrkaWBramie = false;
-                     methods.Ent();
-                     methods.Clear();
+                     Methods.Ent();
+                     Methods.Clear();
                      Console.WriteLine("Wchodzisz do szkoły");
-                     methods.Sleep(1000);
+                     Methods.Sleep(1000);
                      goto dyrkaGate;
                  }
                  else
                  {
-                     methods.Ent();
-                     methods.Clear();
+                     Methods.Ent();
+                     Methods.Clear();
                      goto gate;
                  }
              }
@@ -109,36 +109,34 @@ namespace O.R.K.A._Project_ver._2._0
              else if (choiseToEnter == "2")
              {
                 Console.WriteLine("Patrzysz na szkołę"); 
-                methods.Sleep(500);
+                Methods.Sleep(500);
                 Console.WriteLine("*A... Pierdole*");
-                methods.Sleep(500);
+                Methods.Sleep(500);
                 Console.WriteLine("Odchodzisz");
-                methods.Sleep(500);
+                Methods.Sleep(500);
                 Console.Write(".");
-                methods.Sleep(500);
+                Methods.Sleep(500);
                 Console.Write(".");
-                methods.Sleep(500);
+                Methods.Sleep(500);
                 Console.Write(".");
                 Environment.Exit(1);
              }
              
              else if (choiseToEnter == "1337")
              {
-                 eq.Items.Add(Item.Extingusher);
-                 eq.Items.Add(Item.DrinkOfYouth);
+                 eq.Items.Add(Item.Doors);
+                 eq.Items.Add(Item.Desk);
                  eq.Items.Add(Item.BatonOfPower);
                  eq.Items.Add(Item.CrispsOfImmortality);
                  eq.Items.Add(Item.Code);
-                 methods.Clear();
+                 Methods.Clear();
                  eq.ItemsDisplay();
                  goto front;
              }
 
              else
              {
-                 Console.WriteLine("Dev Log: Jesteś debilem");
-                 methods.Sleep(1000);
-                 methods.Ent();
+                 Methods.Els();
                  goto front;
              }
              
@@ -152,56 +150,51 @@ namespace O.R.K.A._Project_ver._2._0
                 
                 if (_achivmentDyrkaWBramie < 95)
                 {
-                    methods.Sleep(500);
+                    Methods.Sleep(500);
                     Console.WriteLine("Dyrka: A co ty tutaj robisz");
-                    methods.Sleep(500);
+                    Methods.Sleep(500);
                     Console.WriteLine("Ty:yyyy...jaa....ni..");
-                    methods.Sleep(500);
+                    Methods.Sleep(500);
                     Console.WriteLine("Dyrka: Byłeś w Ropuszce.");
-                    methods.Sleep(500);
+                    Methods.Sleep(500);
                     Console.WriteLine("Dyrka: To znaczy nagana");
-                    methods.Sleep(500);
+                    Methods.Sleep(500);
                     Console.WriteLine("A teraz WON na lekcje!!!!");
-                    methods.Sleep(500);
-                    Console.WriteLine("*Dostałeś naganę*");
-                    Console.WriteLine("");
+                    Methods.Sleep(500);
                     Console.WriteLine("TIP: Dostałeś naganę, trzy takowe oznaczają koniec gry.");
-                    methods.Sleep(500);
-                    Console.WriteLine("Stan nagan możesz sprawdzić w ekwipunku");
-                    methods.Ent();
-                    methods.Clear();
-                    methods.Sleep(500);
+                    Methods.Sleep(500);
+                    Methods.Rep();
+                    Methods.Ent();
                 }
-                else if (_achivmentDyrkaWBramie >= 95)
+                else
                 {
                     Console.WriteLine("Zostałeś niespostrzeżony");
-                    methods.Sleep(500);
+                    Methods.Sleep(500);
                     Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine("Achievement Get: Niespostrzeżony");
                     Console.ResetColor();
                     Console.WriteLine(" ");
-                    methods.Ent();
+                    Methods.Ent();
                     niespostrzezony = true;
-                    methods.Clear();
-                    methods.Sleep(500);
+                    Methods.Clear();
+                    Methods.Sleep(500);
                 }
-                goto gate;
             }
             
             //Brama
             gate:
             {
-                methods.Clear();
+                Methods.Clear();
                 Console.WriteLine("Znajdujesz się w przedsionku");
-                methods.Sleep(500);
+                Methods.Sleep(500);
                 Console.WriteLine("Widzisz dwie drogi");
-                methods.Sleep(500);
+                Methods.Sleep(500);
                 Console.WriteLine("1. Schody na lewo");
-                methods.Sleep(500);
+                Methods.Sleep(500);
                 Console.WriteLine("2. Schody na prawo");
-                methods.Sleep(500);
+                Methods.Sleep(500);
                 Console.WriteLine("3. Wyjście");
-                methods.Sleep(500);
+                Methods.Sleep(500);
                 Console.WriteLine("4. Ekwipunek");
 
                 string choiseGate = Console.ReadLine();
@@ -209,37 +202,37 @@ namespace O.R.K.A._Project_ver._2._0
                 if (choiseGate == "1")
                 {
                     Console.WriteLine("Postanawisz wejść po schodach na lewo");
-                    methods.Ent();
-                    methods.Clear();
-                    methods.Sleep(500);
+                    Methods.Ent();
+                    Methods.Clear();
+                    Methods.Sleep(500);
                     goto groundFloor;
                 }
                 else if (choiseGate == "2" && !eq.Items.Contains(Item.Code))
                 {
                     Console.WriteLine("*Zamknięte*");
-                    methods.Sleep(500);
+                    Methods.Sleep(500);
                     Console.WriteLine("Kurwa, dalej niewiem jaki jest ten kod to szatni");
-                    methods.Ent();
-                    methods.Clear();
-                    methods.Sleep(500);
+                    Methods.Ent();
+                    Methods.Clear();
+                    Methods.Sleep(500);
                     goto gate;
                 }
                 else if (choiseGate == "2" && eq.Items.Contains(Item.Code))
                 {
                     Console.WriteLine("*beep*");
-                    methods.Sleep(500);
+                    Methods.Sleep(500);
                     Console.WriteLine("Otwierasz drzwi i schodzisz do Lochów");
-                    methods.Ent();
-                    methods.Clear();
-                    methods.Sleep(500);
+                    Methods.Ent();
+                    Methods.Clear();
+                    Methods.Sleep(500);
                     goto basement;
                 }
                 else if (choiseGate == "3")
                 {
                     Console.WriteLine("Wychodzisz na zewnątrz");
-                    methods.Ent();
-                    methods.Clear();
-                    methods.Sleep(500);
+                    Methods.Ent();
+                    Methods.Clear();
+                    Methods.Sleep(500);
                     goto front;
                 }
                 else if (choiseGate == "4")
@@ -250,7 +243,7 @@ namespace O.R.K.A._Project_ver._2._0
                 }
                 else
                 {
-                    methods.Els();
+                    Methods.Els();
                     goto gate;
                 }
             }
@@ -258,32 +251,32 @@ namespace O.R.K.A._Project_ver._2._0
             //Korytarz parter
             groundFloor:
             {
-                methods.Clear();
-                methods.Sleep(500);
+                Methods.Clear();
+                Methods.Sleep(500);
                 Console.WriteLine("1. Sala 1");
-                methods.Sleep(500);
+                Methods.Sleep(500);
                 Console.WriteLine("2. Siadacze");
-                methods.Sleep(500);
+                Methods.Sleep(500);
                 Console.WriteLine("3. Pokój nauczycielski");
-                methods.Sleep(500);
+                Methods.Sleep(500);
                 Console.WriteLine("4. Kible");
-                methods.Sleep(500);
+                Methods.Sleep(500);
                 Console.WriteLine("5. Sala Fryzjerska");
-                methods.Sleep(500);
+                Methods.Sleep(500);
                 Console.WriteLine("6. Sekretariat");
-                methods.Sleep(500);
+                Methods.Sleep(500);
                 Console.WriteLine("7. Sala Dentystyczna");
-                methods.Sleep(500);
+                Methods.Sleep(500);
                 Console.WriteLine("8. Automat z Kawą");
-                methods.Sleep(500);
+                Methods.Sleep(500);
                 Console.WriteLine("9. Dispenser z wodą");
-                methods.Sleep(500);
+                Methods.Sleep(500);
                 Console.WriteLine("10. Zinwestyguj gaśnice");
-                methods.Sleep(500);
+                Methods.Sleep(500);
                 Console.WriteLine("11. Zawróć");
-                methods.Sleep(500);
+                Methods.Sleep(500);
                 Console.WriteLine("12. Schody na górę");
-                methods.Sleep(500);
+                Methods.Sleep(500);
                 Console.WriteLine("13. Ekwipunek");
 
                 string choiceGround = Console.ReadLine();
@@ -291,22 +284,173 @@ namespace O.R.K.A._Project_ver._2._0
                 //Sala 1
                 if (choiceGround == "1")
                 {
+                    if (!eq.Items.Contains(Item.Jacket))
+
+                    {
+                        Methods.Clear();
+                        Console.WriteLine("Wchodzisz do Sali 1");
+                        Methods.Sleep(500);
+                        Console.WriteLine("Przez przypadek wpadasz na Apel");
+                        Methods.Sleep(500);
+                        Console.WriteLine("Dyrka zauważa cię");
+                        Methods.Sleep(500);
+                        Console.WriteLine("a kolejno rzecze:");
+                        Methods.Sleep(500);
+                        Console.WriteLine("Dyrka: Ooo, Akurat miałam ci dać naganę");
+                        Methods.Sleep(500);
+                        Methods.Rep();
+                        goto groundFloor;
+                    }
                     
+                    if (eq.Items.Contains(Item.Jacket))
+                    {
+                        Methods.Clear();
+                        Console.WriteLine("Otwierasz drzwi, w środku jest apel");
+                        Methods.Sleep(500);
+                        Console.WriteLine("Dyrka zauważa cię,");
+                        Methods.Sleep(500);
+                        Console.WriteLine("ale dzięki kurtce twego 2 metrowego kolegi nie jest w stanie cię rozpoznać");
+                        Methods.Sleep(500);
+                        Console.WriteLine("korzystając z okazji szybko wychodzisz");
+                        Methods.Ent();
+                        goto groundFloor;
+                    }
                 }                
                 //Siadacze
                 else if (choiceGround == "2")
                 {
-                    
-                }                
+                        if (!loop)
+                        {
+                            Console.WriteLine("Wszystkie  siadacze są zajęte");
+                            Methods.Ent();
+                            goto groundFloor;
+                        }
+                        else
+                        {
+                            Console.WriteLine("Siadasz na siadaczu i się regenerujesz");
+                            Methods.Sleep(500);
+                            Console.WriteLine("*Odnawiasz 25hp*");
+                            //display_HP += 25;
+                            Methods.Ent();
+                            goto groundFloor;
+                        }
+                }          
                 //Pokój nauczycielski
                 else if (choiceGround == "3")
                 {
-                    
+                    Methods.Clear();
+                    Console.WriteLine("Przez uchylone drzwi widzisz panią Marzenę Brat Zakonny");
+                    Methods.Sleep(500);
+                    Console.WriteLine("Gdyby tylko dało się ją wywabić");
+                    Methods.Sleep(500);
+                    Methods.Ent();
+                    goto groundFloor;
                 }                
                 //Kible
                 else if (choiceGround == "4")
                 {
+                    if (toiletEvent == 1)
+                    {
+                        Methods.Clear();
+                        Console.WriteLine("Wkraczasz do toalet prawdziwych męszczyzn");
+                        Methods.Sleep(500);
+                        Console.WriteLine("Wchodzisz do kabiny by zastanowić się nad sensem swego żałosnego istnienia");
+                        Methods.Sleep(500);
+                        Console.WriteLine("Nagle słyszysz: *fap**fap**fap*");
+                        Methods.Sleep(500);
+                        Console.WriteLine("Zaglądzasz przez góre kabiny i widzisz");
+                        Methods.Sleep(500);
+                        Methods.Sleep(500);
+                        Methods.Sleep(500);
+                        Console.WriteLine("Pana Kruka");
+                        Methods.Sleep(500);
+                        Console.WriteLine("Szybko uciekasz by cię nie zauważył");
+                        Methods.Sleep(500);
+                        Methods.Ent();
+                        toiletEvent++;
+                        Methods.Clear();
+                        goto groundFloor;
+                    }
                     
+                    else if (toiletEvent == 2 && zbyszekRatuje == false)
+                    {
+                        Methods.Clear();
+                        Console.WriteLine("Wchodzisz do toalet i widzisz Horacego i Bonifacego wciągających Tobake");
+                        Methods.Sleep(500);
+                        Console.WriteLine("Witasz się z nimi, gdy do toalet wparowuje pan doktor reformowany Bielmar i rzecze:");
+                        Methods.Sleep(500);
+                        Console.WriteLine("RAZ...DWA...TRZY... kto wciąga tabake ma się przyznać bo inaczej wszyscy dostają po naganie");
+                        Methods.Sleep(500);
+                        Console.WriteLine("Twoi znajomi wspólnie oskarżyli o to ciebie");
+                        Methods.Sleep(500);
+                        Methods.Rep();
+                        Methods.Ent();
+                        toiletEvent++;
+                        Methods.Clear();
+                        goto groundFloor; 
+                        ////////////toiletEvent dalszy nie jest jeszcze zrobiony z powodu niechęci do zrobienia jego////////////////
+                    }
+                    
+                    else if (toiletEvent == 2 && zbyszekRatuje == true)
+                    {
+                        Console.WriteLine("Wchodzisz do toalet i widzisz Horacego i Bonifacego wciągających Tobake");
+                        Methods.Sleep(500);
+                        Console.WriteLine("Witasz się z nimi, gdy do toalet wparowuje pan doktor reformowany Bielmar i rzecze:");
+                        Methods.Sleep(500);
+                        Console.WriteLine("RAZ...DWA...TRZY... kto wciąga tabake ma się przyznać bo inaczej wszyscy dostają po naganie");
+                        Methods.Sleep(500);
+                        Console.WriteLine("Twoi znajomi wspólnie oskarżyli o to ciebie");
+                        Methods.Sleep(500);
+                        Console.WriteLine("W tym momencie słysząc co się dzieje, wchodzi ZBYSZEK himself");
+                        Methods.Sleep(500);
+                        Console.WriteLine("Zbyszek strzela Bielmarowi w PYSK wyciaga go za fraki i kulturalnie wrzuca do kontenera z odpadami naturalnymi #segragacja ");
+                        Methods.Sleep(500);
+                        Console.WriteLine("Horacy i Bonifacy dostają w PYSK od Zbyszka");
+                        Methods.Sleep(500);
+                        Console.WriteLine("Wychodzisz ze Zbyszkiem na korytarz");
+                        Methods.Sleep(500);
+                        Console.WriteLine("Achivment get: #segregacja");
+                        segregacja = true;
+                        Methods.Ent();
+                        toiletEvent++;
+                        Methods.Clear();
+                        goto groundFloor;
+                    }
+                    
+                    else if (toiletEvent == 3)
+                    {
+                        Methods.Clear();
+                        Console.WriteLine("Idziesz się odlać do pisuaru");
+                        Methods.Sleep(500);
+                        Console.WriteLine("Szczając widzisz TAJEMNICZE GÓWNO na podłodze");
+                        Methods.Sleep(500);
+                        Console.WriteLine("Podchodzisz by zbadać sprawę, gdy do kibli wchodzi nagle po swej mistyczniej 'nieobecności'");
+                        Methods.Sleep(1000);
+                        Console.WriteLine("Świerszcz w Czynie");
+                        Methods.Sleep(500);
+                        Console.WriteLine("Wita się z tobą z daleka, próbując podać ci ręke poślizguje się na tym ów tajemniczym gównie");
+                        Methods.Sleep(500);
+                        Console.WriteLine("Rozbija se swój głupi ryj poczym odchodzi w strone drzwi");
+                        Methods.Sleep(500);
+                        Console.WriteLine("Wykrzykując przy tym: 'Kurwa', 'japierdole', 'to jest pojebane'");
+                        Methods.Ent();
+                        toiletEvent++;
+                        Methods.Clear();
+                        goto groundFloor;
+                    }
+                    
+                    else if (toiletEvent > 3)
+
+                    {
+                        Methods.Clear();
+                        Console.WriteLine("Po co tu przyszedłem");
+                        Methods.Sleep(500);
+                        Console.WriteLine("A... Zmierzam w tył...");
+                        Methods.Sleep(500);
+                        Methods.Ent();
+                        Methods.Clear();
+                        goto groundFloor;
+                    }
                 }                
                 //Sala Fryzjerska
                 else if (choiceGround == "5")
@@ -336,14 +480,14 @@ namespace O.R.K.A._Project_ver._2._0
                 //Zinwestyguj gaśnice
                 else if (choiceGround == "10")
                 {
-                    methods.Clear();
+                    Methods.Clear();
                     eq.Items.Add(Item.Extingusher);
                     Console.WriteLine("Zauważasz gaśnice");
-                    methods.Sleep(500);
+                    Methods.Sleep(500);
                     Console.WriteLine("Uważając że, jest przydatna zabierasz ją");
-                    methods.Sleep(500);
+                    Methods.Sleep(500);
                     Console.WriteLine("*Zdobywasz gaśnice*");
-                    methods.Ent();
+                    Methods.Ent();
                     goto groundFloor;
                 }                
                 //Zawróć
@@ -359,7 +503,7 @@ namespace O.R.K.A._Project_ver._2._0
                 //Ekwipunek
                 else if (choiceGround == "13")
                 {
-                    methods.Clear();
+                    Methods.Clear();
                     eq.ItemsDisplay();
                     goto groundFloor;
                 }
